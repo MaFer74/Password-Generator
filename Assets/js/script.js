@@ -113,3 +113,11 @@ function generatePassword() {
             numbers = confirm("Would you like your password to have Numbers? Click Ok to confirm or Cancel to skip this option");	
         }while (uppercase === false && lowercase === false && symbols === false && numbers === false )
 	}
+    var keyLength = prompt("Password must be between 8 and 128 characters! Click OK to continue");
+	if(!(Number(keyLength)%1===0) || (keyLength < 8 || keyLength > 128)){
+		do {
+			alert("Please input a Number between 8 and 128");
+			keyLength = prompt("How many characters would you like in your password (between 8 and 128)?");
+		} while (!(Number(keyLength)%1===0) || (keyLength < 8 || keyLength > 128));
+	}
+    
