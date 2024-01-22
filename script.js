@@ -121,3 +121,42 @@ function generatePassword() {
 		} while (!(Number(keyLength)%1===0) || (keyLength < 8 || keyLength > 128));
 	}
     var charLimit = parseInt(keyLength);
+   
+    
+// Conditions for password generation
+	if (lowercase) {
+        generateArray(lowerCasedCharacters);
+        }
+      if (uppercase) {
+          generateArray(upperCasedCharacters);
+      }
+      if (numbers) {
+          generateArray(numericCharacters);
+      }
+      if (symbols) {
+          generateArray(specialCharacters);
+      }
+      
+      var finalPassword = ""
+      for (var i = 0; i < charLimit; i++) {
+        var rng =[Math.floor(Math.random() * multiSelect.length)];
+        // or finalPassword += possibleCharacters[rng];
+        finalPassword = finalPassword + multiSelect[rng];
+      }
+      return finalPassword;
+  }
+
+ // Get references to the #generate element
+var generateBtn = document.querySelector('#generate');
+
+// Write password to the #password input
+function writePassword() {
+  
+  var password = generatePassword();
+  var passwordText = document.querySelector('#password');
+
+  passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener('click', writePassword); 
