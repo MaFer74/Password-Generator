@@ -120,4 +120,4 @@ function generatePassword() {
 			keyLength = prompt("How many characters would you like in your password (between 8 and 128)?");
 		} while (!(Number(keyLength)%1===0) || (keyLength < 8 || keyLength > 128));
 	}
-    
+    var charLimit = parseInt(keyLength);
