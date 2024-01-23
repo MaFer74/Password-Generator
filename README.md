@@ -55,6 +55,8 @@ Overall, a random password generator is a tool that helps make passwords more ro
 
 ```md
 ![alt text](assets/images/screenshot.png)
+
+piublished website: https://mafer74.github.io/Password-Generator/
 ```
 ![Screenshot 2024-01-22 at 23 18 41](https://github.com/MaFer74/Password-Generator/assets/152433962/494ac120-fa19-45f0-b132-c0a53d42e7ef)
 
