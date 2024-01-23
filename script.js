@@ -101,14 +101,14 @@ function generateArray(secondArray) {
 function generatePassword() {
     alert("Please confirm at least one of the following options for the password to be generated")
 	var uppercase = confirm("Would you like your password to have upperCases? Click Ok to confirm or Cancel to skip this option");
-	var lowercase = confirm("Would you like your password to have Lowercase? Click Ok to confirm or Cancel to skip this option");
+	var lowercase = confirm("Would you like your password to have lowerCase? Click Ok to confirm or Cancel to skip this option");
 	var symbols = confirm("Would you like your password to have Special Characters? Click Ok to confirm or Cancel to skip this option");
 	var numbers = confirm("Would you like your password to have Numbers? Click Ok to confirm or Cancel to skip this option");
 	if (uppercase === false && lowercase === false && symbols === false && numbers === false){
         do{
             alert("At least one of the options need to be confirmed to continue")
             uppercase = confirm("Would you like your password to have upperCases? Click Ok to confirm or Cancel to skip this option");
-            lowercase = confirm("Would you like your password to have Lowercase? Click Ok to confirm or Cancel to skip this option");
+            lowercase = confirm("Would you like your password to have lowerCase? Click Ok to confirm or Cancel to skip this option");
             symbols = confirm("Would you like your password to have Special Characters? Click Ok to confirm or Cancel to skip this option");
             numbers = confirm("Would you like your password to have Numbers? Click Ok to confirm or Cancel to skip this option");	
         }while (uppercase === false && lowercase === false && symbols === false && numbers === false )
